@@ -1,2 +1,2 @@
-# NombradasBackEnd
-Aplicación para solicitud de dotaciones de nombradas
+# BASE PROJECT WEB API
+PROYECTO BASE PARA PROYECTOS DE TIPO WEB API USANDO FRAMEWORK ASP.NET
