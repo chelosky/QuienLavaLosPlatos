@@ -189,7 +189,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\EjemploBasicoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PaisesController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Models\EjemploBaseModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -198,7 +197,6 @@
     <Compile Include="Models\Connection\DB.cs" />
     <Compile Include="Models\Connection\DBSqlServer.cs" />
     <Compile Include="Models\Connection\IDB.cs" />
-    <Compile Include="Models\PaisModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
