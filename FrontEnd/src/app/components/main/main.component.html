@@ -1,0 +1,39 @@
+<div *ngIf="mainServices.competitorList.length == 0" class="wrapper">
+    <mat-spinner></mat-spinner>
+</div>
+<div class="animatedBG" *ngIf="mainServices.competitorList.length != 0">
+    <div *ngIf="ganadorSeleccionado != true" class="card text-center cardMain">
+        <div class="card-header">
+          ¿Quien Lavará los Platos?
+        </div>
+        <div *ngIf="!seleccionandoGanador" class="card-body text-center">
+          <h5 class="card-title">Presione el Botón</h5>
+          <p class="card-text">No se puede volver a repetir el ganador del sorteo anterior.</p>
+            <button 
+            mat-fab
+            (click)="seleccionarGanador()"
+            class="btn-circle-mini" color="primary">
+                <mat-icon class="icon-circle">autorenew</mat-icon >
+            </button>
+        </div>
+        <div *ngIf="seleccionandoGanador" class="card-body text-center align-self-center">
+            <mat-spinner></mat-spinner>
+        </div>
+        <div class="card-footer text-muted">
+          Total Participantes: {{mainServices.competitorList.length}}
+          <br>
+          <div *ngIf="ganadorAnterior != null">
+            Ganador Anterior: {{ganadorAnterior.nombre}}
+          </div>
+        </div>
+    </div>
+    <div *ngIf="ganadorSeleccionado == true" class="card text-center cardMain cardResult">
+        <div class="card-header">
+          <h2 class="card-title">{{ganadorActual.nombre}}</h2>
+        </div>
+        <img [src]="basePath + ganadorActual.foto" class="card-img-top fotoganador">
+        <div class="card-body">
+          <p class="card-text">FUE EL GANADOR PARA LAVAR LOS PLATOS HOY :D</p>
+        </div>
+    </div>
+</div>
